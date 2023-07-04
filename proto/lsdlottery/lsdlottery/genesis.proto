@@ -1,0 +1,12 @@
+syntax = "proto3";
+package lsdlottery.lsdlottery;
+
+import "gogoproto/gogo.proto";
+import "lsdlottery/lsdlottery/params.proto";
+
+option go_package = "lsd-lottery/x/lsdlottery/types";
+
+// GenesisState defines the lsdlottery module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
