@@ -1,0 +1,7 @@
+syntax = "proto3";
+package lsdlottery.wasm;
+
+option go_package = "lsd-lottery/x/wasm/types";
+
+// Msg defines the Msg service.
+service Msg {}

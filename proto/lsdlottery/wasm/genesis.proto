@@ -1,0 +1,12 @@
+syntax = "proto3";
+package lsdlottery.wasm;
+
+import "gogoproto/gogo.proto";
+import "lsdlottery/wasm/params.proto";
+
+option go_package = "lsd-lottery/x/wasm/types";
+
+// GenesisState defines the wasm module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package lsdlottery.wasm;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "lsd-lottery/x/wasm/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}
