@@ -1,52 +1,67 @@
-# lsdlottery
-**lsdlottery** is a blockchain built using Cosmos SDK and Tendermint and created with [Ignite CLI](https://ignite.com/cli).
+# Lottery
 
-## Get started
 
-```
-ignite chain serve
-```
+`Lottery` 是一个集合 **流动性质押衍生品(LSD, Liquid Staking Derivatives)** 和 **彩票** 功能的应用链，用户在Lottery上可以质押ATOM或其他Cosmos应用链token，得到ltATOM，用户可以把ltATOM在defi平台交易，也可以用ltATOM在Lottery上进行投注，以获得可能的奖励。
 
-`serve` command installs dependencies, builds, initializes, and starts your blockchain in development.
+## LSD
+`TBD`
 
-### Configure
+## Lottery
 
-Your blockchain in development can be configured with `config.yml`. To learn more, see the [Ignite CLI docs](https://docs.ignite.com).
+### Description
 
-### Web Frontend
+#### **彩票** 资格：
 
-Ignite CLI has scaffolded a Vue.js-based web app in the `vue` directory. Run the following commands to install dependencies and start the app:
+`ltATOM` 持有者
 
-```
-cd vue
-npm install
-npm run serve
-```
+#### **彩票** 规则：`TBD`
 
-The frontend app is built using the `@starport/vue` and `@starport/vuex` packages. For details, see the [monorepo for Ignite front-end development](https://github.com/ignite/web).
+权重：与 用户一年内参与次数 和 `lsATOM` 数量有关，公式 `TBD`
+中奖：按权重在所有参与者中随机选出一个
 
-## Release
-To release a new version of your blockchain, create and push a new tag with `v` prefix. A new draft release with the configured targets will be created.
+#### **彩票** 玩法：
 
-```
-git tag v0.1
-git push origin v0.1
-```
+定期开奖，例如 20：00开奖（尽量自动，手动备选）
+每天一次，中奖者获得90%的奖励，10%进入年度终极大奖奖金池
+每年12-31 22:00年底终极大奖开奖，中奖者获得全部奖金（或者分1，2，3名）
 
-After a draft release is created, make your final changes from the release page and publish it.
 
-### Install
-To install the latest version of your blockchain node's binary, execute the following command on your machine:
+### Use Cases
 
-```
-curl https://get.ignite.com/username/lsd-lottery@latest! | sudo bash
-```
-`username/lsd-lottery` should match the `username` and `repo_name` of the Github repository to which the source code was pushed. Learn more about [the install process](https://github.com/allinbits/starport-installer).
+`TBD`
 
-## Learn more
+#### Start game 平台开始新一轮
 
-- [Ignite CLI](https://ignite.com/cli)
-- [Tutorials](https://docs.ignite.com/guide)
-- [Ignite CLI docs](https://docs.ignite.com)
-- [Cosmos SDK docs](https://docs.cosmos.network)
-- [Developer Chat](https://discord.gg/ignite)
+``TBD``
+
+#### Place a ticket 用户投注
+
+`TBD`
+
+#### Close game 当前轮次结束，开奖
+
+`TBD`
+
+#### Choose winner 选出获奖者
+
+`TBD`
+
+#### Calculate Prize 计算奖金
+
+`TBD`
+
+#### Winner withdraw 中奖者取款
+
+`TBD`
+
+#### Quit game 用户退出
+
+`ltATOM` 持有者通过在投注入口参与 **彩票** 活动。
+
+### System Design
+
+#### 流程图
+
+`TBD`
+
+
