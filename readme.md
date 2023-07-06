@@ -3,11 +3,11 @@
 
 `Lottery` 是一个集合 **流动性质押衍生品(LSD, Liquid Staking Derivatives)** 和 **彩票** 功能的应用链，用户在Lottery上可以质押ATOM或其他Cosmos应用链token，得到ltATOM，用户可以把ltATOM在defi平台交易，也可以用ltATOM在Lottery上进行投注，以获得可能的奖励。
 
-`Lottery` 同时发行同名 Token `LOTTERY` ，供应量是1亿，其中团队占 20%， 空投 10%， 生态基金 30%，节点运营商 40%。
+`Lottery` 同时发行同名 Token `LOTTERY` ，供应量是1亿，其中团队占 20%， 空投 5%， 私募: 10%, 公募： 15%，社区 40%， 国库 10%
 
 每年增发 20%，其中25%分配给矿工，50% 分配作彩票奖金池，25% 分配给质押者
 
-消耗 `TBD` （要平衡，不能只增发不消耗）
+消耗：购买 彩票，每注 `100 LOTTERY`
 
 ## LSD
 
@@ -24,7 +24,7 @@
 
 #### **彩票** 规则：
 
-奖金来源：平台增发的 Token `LOTTERY` 以及 投注额
+奖金来源：平台增发的 Token `LOTTERY` 
 权重：与 用户一年内参与次数 和 `lsATOM` 数量有关，公式 `TBD`
 中奖：按权重在所有参与者中随机选出一个
 
@@ -72,16 +72,24 @@
 
 ### System Design
 
-#### 角色
+#### Actor （合约）
 
-Agent：用户代理 
+Membership：用户注册表
 
-Operator: 彩票运营者
+UserAgent：用户代理,每个用户专用，简单版智能合约钱包
 
-PrizePool：奖金池
+Operator: 彩票运营（未来可能由Oracle自动触发）
 
-#### 流程图
+Lottery：彩票，每轮一个，开奖后生成一个新的合约
 
-`TBD`
+PrizePool：奖金池 （计算奖金）
+
+Distribution: 奖金分配 
+
+
+
+#### Flow Diagram
+
+![avatar](./lottery-flow.png)
 
 
