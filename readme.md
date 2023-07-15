@@ -11,7 +11,7 @@
 
 ## LSD
 
-`TBD`
+![avatar](./lsd-flow.png)
 
 
 ## Lottery
